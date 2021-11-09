@@ -1,0 +1,19 @@
+
+<hr>
+<!--<router-outlet></router-outlet>
+Todas las rutas hijas, quiero que aparezcan aqui, en la madre que es Home. Este es
+el segundo router-outler, recordemos que el principal lo tenemos en el html de app-->
+
+<mat-drawer-container fullscreen>
+    <mat-sidenav #sidenav>
+        <h1>Universo Web</h1>
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button
+        (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-toolbar>      
+
+</mat-drawer-container>

@@ -6,7 +6,56 @@ el segundo router-outler, recordemos que el principal lo tenemos en el html de a
 
 <mat-sidenav-container fullscreen>
     <mat-sidenav #sidenav mode="push">
-        <h1>Universo Web</h1>
+        <mat-toolbar color="primary">
+            <span>Menú</span>
+            
+        <span class="spacer"></span>
+            <button mat-icon-button
+            (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar> 
+
+        <mat-nav-list>
+            <a routerLink="./home"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <span>Home</span>
+            </a>
+            <a routerLink="./buscar"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>search</mat-icon>
+                <span>Buscar</span>
+            </a>
+            <a routerLink="./planes"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>backpack</mat-icon>
+                <span>Planes</span>
+            </a>
+            <a routerLink="./servicios"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>miscellaneous_services</mat-icon>
+                <span>Servicios</span>
+            </a>
+            <a routerLink="./equipo"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>supervised_user_circle</mat-icon>
+                <span>Equipo</span>
+            </a>
+            <a routerLink="./contacto"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>email</mat-icon>
+                <span>Contacto</span>
+            </a>
+
+        </mat-nav-list>
+
     </mat-sidenav>
 
     <mat-toolbar>
@@ -14,6 +63,18 @@ el segundo router-outler, recordemos que el principal lo tenemos en el html de a
         (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
-    </mat-toolbar>      
+
+        <span class="spacer"></span>
+
+        <button mat-button>
+            Logout
+        </button>
+    </mat-toolbar>  
+    
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+
 
 </mat-sidenav-container>

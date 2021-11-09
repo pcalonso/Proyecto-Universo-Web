@@ -2,3 +2,7 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Condensed", sans-serif; }
+.spacer {
+    flex: 1 1 auto;
+    /*así empujamos todo a los bordes*/
+}

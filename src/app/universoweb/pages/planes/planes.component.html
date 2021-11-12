@@ -1,1 +1,39 @@
-<p>planes works!</p>
+<h1>Planes de UW</h1>
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row wrap"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="20px">
+
+    <div fxFlex="20"
+         fxFlex.lg="15"
+         fxFlex.sm="30"
+         *ngFor="let planes of planes">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title> {{ planes.publisher}} </mat-card-title>
+                <mat-card-subtitle> {{planes.tiempo}}</mat-card-subtitle>
+            </mat-card-header>
+           
+            <img mat-card-image src="assets/planes/{{ planes.id }}.jpg">
+    
+            <mat-card-content>
+               
+              <strong>Precio</strong><br>{{ planes.precio}}
+                
+            </mat-card-content>
+    
+            <mat-card-actions>
+                <button mat-button color="primary"> Leer mas...</button>
+                <button mat-button color="secundary"> Comprar </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    
+</div>
+
+
+   
+

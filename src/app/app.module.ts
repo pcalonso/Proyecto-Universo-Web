@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,8 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
     //porque necesitamos hacer peticiones http en la "base de datos"
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

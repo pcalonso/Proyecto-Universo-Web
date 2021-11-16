@@ -11,6 +11,8 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { UniversowebRoutingModule } from './universoweb-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material/material.module';
+import { ServicioComponent } from './pages/servicio/servicio.component';
+
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { MaterialModule } from '../material/material.module';
     ServiciosComponent,
     ContactoComponent,
     BuscarComponent,
-
+    ServicioComponent,
+    
+   
   ],
   imports: [
     CommonModule,

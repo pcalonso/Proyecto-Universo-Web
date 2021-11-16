@@ -5,7 +5,10 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { EquipoComponent } from './pages/equipo/equipo.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PlanesComponent } from './pages/planes/planes.component';
+import { ServicioComponent } from './pages/servicio/servicio.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
+
+
 
 const rutas: Routes = [
   {
@@ -19,7 +22,8 @@ const rutas: Routes = [
   //{ path : "home", component: HomeComponent},
   { path : "planes", component: PlanesComponent},
   { path : "servicios", component: ServiciosComponent},
-  { path : "**" , redirectTo: "home"}
+  { path: ":id", component: ServicioComponent},
+ 
   ]
 }
 ]

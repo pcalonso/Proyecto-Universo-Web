@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
+import { AuthGuard } from './auth/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -13,8 +14,11 @@ const routes: Routes = [
   },
   {
     path: "universoweb",
-    loadChildren: () => import("./universoweb/universoweb.module"). then ( m=> m.UniversowebModule)
+    loadChildren: () => import("./universoweb/universoweb.module"). then ( m=> m.UniversowebModule),
+    canLoad: [ AuthGuard]
+    //Es este modulo el que queremos proteger cuando se logueen
   },
+
   {
     path: "404",
     //en esta ruta

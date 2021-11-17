@@ -6,6 +6,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { MaterialModule } from '../material/material.module';
+import { CuentaComponent } from './pages/cuenta/cuenta.component';
 
 
 
@@ -13,6 +14,7 @@ import { MaterialModule } from '../material/material.module';
   declarations: [
     LoginComponent,
     RegistroComponent,
+    CuentaComponent,
   
   ],
   imports: [

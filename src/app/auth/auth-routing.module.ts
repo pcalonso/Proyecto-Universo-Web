@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { CuentaComponent } from './pages/cuenta/cuenta.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
       //rutas hijas que vamos a tener
       { path: "login", component: LoginComponent},
       { path: "registro", component: RegistroComponent},
+      { path: "cuenta", component:CuentaComponent},
       { path: "**", redirectTo: "login"}
 
     ]

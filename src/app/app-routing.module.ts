@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { AuthGuard } from './auth/guards/auth.guard';
+import { CuentaComponent } from './auth/pages/cuenta/cuenta.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,13 @@ const routes: Routes = [
   {
     path: "universoweb",
     loadChildren: () => import("./universoweb/universoweb.module"). then ( m=> m.UniversowebModule),
+    canLoad: [ AuthGuard],
+    //Es este modulo el que queremos proteger cuando se logueen
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "cuenta",
+    component: CuentaComponent,
     canLoad: [ AuthGuard],
     //Es este modulo el que queremos proteger cuando se logueen
     canActivate: [AuthGuard]

@@ -20,7 +20,9 @@ export class LoginComponent  {
       console.log(resp);
 
       if ( resp.id){
-        this.router.navigate (["./universoweb"]);
+        this.router.navigate (["./auth/cuenta"]);
+        //queremos que al loguearse, acceda a su cuenta personal
+        //que esta dentro de auth/cuenta
       }
     })
     //this.router.navigate(["./universoweb"])

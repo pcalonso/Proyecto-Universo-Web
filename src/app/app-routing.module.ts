@@ -15,8 +15,9 @@ const routes: Routes = [
   {
     path: "universoweb",
     loadChildren: () => import("./universoweb/universoweb.module"). then ( m=> m.UniversowebModule),
-    canLoad: [ AuthGuard]
+    canLoad: [ AuthGuard],
     //Es este modulo el que queremos proteger cuando se logueen
+    canActivate: [AuthGuard]
   },
 
   {

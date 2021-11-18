@@ -1,0 +1,94 @@
+<h2>Template: Dinámicos</h2>
+<hr>
+
+<form (ngSubmit)="enviar( )" #miFormulario='ngForm' autocomplete="off">
+
+    <!--Nombre-->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Nombre</label>
+        <div class="col-sm-9">
+            <input class="form-control"
+                    [ngModel]="persona.nombre"
+                    name="nombre"
+                    placeholder="Nombre de la persona"
+                    required>
+            
+            <span class="form-text text-danger"
+                    *ngIf="nombreValido()">Debe ser un nombre válido</span>        
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for ="email">Email</label>
+        <input type="text" 
+               class="form-control" 
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+               id="email"
+               name="email" 
+               
+               ngModel #emailref="ngModel"
+               required>
+        <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" 
+              class ="aler alert-danger">
+        <div [hidden]="!emailref.errors?.pattern">
+            Email invalido
+        </div> 
+        </div> 
+    </div>
+
+    <!--Agregar Plan-->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Agregar Plan</label>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <input class="form-control"
+                        placeholder="Agregar favorito"
+                        [(ngModel)]="nuevoPlan"
+                        (keyup.center)="agregarPlan()"
+                        name="nuevoJuego">
+                        <!--creamos una nueva propiedad para añadir dinámicamente-->
+                <button class="btn btn-outline-primary"
+                        type="button"
+                        (click)="agregarPlan()">
+                        <!--agregamos esta instrucción pero sin necesidad de agregar nada mas porque
+                        ya lo tengo en la propiedad nuevo juego-->
+                    Agregar
+                </button>        
+            </div>
+        </div>
+    </div>
+
+
+    <!--Lista de Juegos Favoritos-->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Estoy interesad@ en</label>
+        <div class="col-sm-9">
+            <div class="input-group  mb-1" *ngFor="let plan of persona.plan; let i=index">
+                <input [(ngModel)]="plan.nombre"
+                name="favorito_{{ i }}"
+                class="form-control"
+                required>
+            <button class="btn btn-outline-danger"
+                type="button"
+                (click)="eliminar(i)">
+                Eliminar
+             </button>       
+            </div>    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sam-12">
+            <button type="button" 
+                    class="btn btn-primary float-end"
+                    [disabled]="miFormulario.invalid"
+                    (click)="enviar()"> 
+                Enviar
+            </button>
+        </div>
+    </div>
+
+
+
+<span>Persona</span>
+<pre>{{ persona | json}}</pre>

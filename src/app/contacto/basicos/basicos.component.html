@@ -1,0 +1,92 @@
+<h2>Rellena los campos y en breve te atenderemos</h2>
+<hr>
+
+
+<!--Nombre-->
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="enviar( )" #miFormulario="ngForm" autocomplete="off">
+                <label class="col-sm-3 col-form-label">Nombre</label>
+                <div class="col-sm-9">
+                    <input type="text"
+                           class="form-control"
+                           ngModel
+                           name="nombre"
+                           placeholder="Nombre"
+                           required
+                           minlength="3">
+                    <span class="form-text text-danger"
+                        *ngIf="nombreValido()"> Debe contener al menos 3 letras</span>       
+                    <!--con ngModel lo que hacemos es decir a Angular que coja los datos del formulario
+                    y por obligación tiene que tener el name.
+                    con*ngIf creamos el condicional y creamos la validación controlando el nombre del producto
+                    en este caso y para que no salga el condicional si o si, con el touched decimos que lo tiene
+                    que tocar el usuario para que salga da condición
+                    El código se ha enviado a basicos.components para simplificar aqui-->
+    </div>
+
+
+
+<!--Email-->
+                    <div class="form-group">
+                        <label class="col-sm-3 col-form-label"></label>
+                       
+                        <label for ="email">Email</label>
+                       
+                        <input type="text" 
+                               class="form-control" 
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                               id="email"
+                               name="email" 
+                               
+                               ngModel #emailref="ngModel"
+                               required>
+                        <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" 
+                              class ="aler alert-danger">
+                        <div [hidden]="!emailref.errors?.pattern">
+                            Email invalido
+                        </div> 
+                        </div> 
+                    </div>
+           
+<!--Existencias-->
+
+            <div class="mb-3">
+                <label for="Comentarios" 
+                       class="form-label">Comentarios</label>
+                <textarea class="form-control" 
+                        required  
+                        rows="3">
+                </textarea>
+            </div>    
+
+            <div class="row">
+                <div class="col">
+                <br>  
+                <button type="submit"
+                [disabled]="miFormulario.invalid"
+                        class="btn btn-primary float-end">
+                    Enviar
+                </button>
+            </div>
+        </div>
+  
+    </form>
+
+<div class="row">
+    <div class="col">
+
+        <span>Valid</span>
+        <pre>{{miFormulario.valid}}</pre>
+
+       <span>Touched</span>
+        <pre>{{miFormulario.touched}}</pre>
+        <!--touched se emplea para saber si el usuario ha tocado el formulario-->
+
+        <span>Value</span>
+        <pre>{{miFormulario.value | json}}</pre>
+
+        <span>Comentarios</span>
+        <pre>{{miFormulario.touched| json}}</pre>
+    </div>
+</div>

@@ -1,39 +1,34 @@
-
-<hr>
-<!--<router-outlet></router-outlet>
-Todas las rutas hijas, quiero que aparezcan aqui, en la madre que es Home. Este es
-el segundo router-outler, recordemos que el principal lo tenemos en el html de app-->
-
 <mat-sidenav-container fullscreen>
     <mat-sidenav #sidenav mode="push">
         <mat-toolbar color="primary">
-            <span>Menú</span>
-            
+            <span>Bienvenid@ a tu Cuenta</span>
+            <!--Titulo de la Cuenta-->
         <span class="spacer"></span>
             <button mat-icon-button
             (click)="sidenav.toggle()">
                 <mat-icon>menu</mat-icon>
             </button>
         </mat-toolbar> 
+            <!--Simbolo del Menu-->
 
         <mat-nav-list>
             <a routerLink="./barra"
                 mat-list-item
                 (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>home</mat-icon>
-                <span>Home</span>
+                <mat-icon mat-list-icon>add_business</mat-icon>
+                <span>Planes Contratados</span>
             </a>
-            <a routerLink="./buscar"
+            <a routerLink="./dona"
                 mat-list-item
                 (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>search</mat-icon>
-                <span>Buscar</span>
+                <mat-icon mat-list-icon>trending_up</mat-icon>
+                <span>Evolución</span>
             </a>
-            <a routerLink="./planes"
+            <a routerLink="./dona-http"
                 mat-list-item
                 (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>backpack</mat-icon>
-                <span>Planes</span>
+                <span>Plan Concreto</span>
             </a>
             <a routerLink="./servicios"
                 mat-list-item
@@ -51,7 +46,7 @@ el segundo router-outler, recordemos que el principal lo tenemos en el html de a
                 mat-list-item
                 (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>email</mat-icon>
-                <span>Contacto</span>
+                <span>Contact@</span>
             </a>
 
         </mat-nav-list>
@@ -78,3 +73,5 @@ el segundo router-outler, recordemos que el principal lo tenemos en el html de a
     </div>
 
 </mat-sidenav-container>
+
+

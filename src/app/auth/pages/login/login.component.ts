@@ -22,7 +22,7 @@ export class LoginComponent  {
       if ( resp.id){
         this.router.navigate (["./cuenta"]);
         //queremos que al loguearse, acceda a su cuenta personal
-        //que esta dentro de auth/cuenta
+        //que esta dentro de cuenta
       }
     })
     //this.router.navigate(["./universoweb"])

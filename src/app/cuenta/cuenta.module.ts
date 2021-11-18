@@ -7,6 +7,9 @@ import { BarrasComponent } from './pages/barras/barras.component';
 import { DonaComponent } from './pages/dona/dona.component';
 import { DonaHttpComponent } from './pages/dona-http/dona-http.component';
 import { GraficaBarraComponent } from './components/grafica-barra/grafica-barra.component';
+import { MicuentaComponent } from './pages/micuenta/micuenta.component';
+import { MaterialModule } from '../material/material.module';
+
 
 
 @NgModule({
@@ -15,6 +18,9 @@ import { GraficaBarraComponent } from './components/grafica-barra/grafica-barra.
     DonaComponent,
     DonaHttpComponent,
     GraficaBarraComponent,
+    MicuentaComponent,
+ 
+
  
     
   ],
@@ -22,6 +28,7 @@ import { GraficaBarraComponent } from './components/grafica-barra/grafica-barra.
     CommonModule,
     CuentaRoutingModule,
     ChartsModule,
+    MaterialModule
  
   ]
 })

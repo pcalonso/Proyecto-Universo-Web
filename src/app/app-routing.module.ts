@@ -35,10 +35,10 @@ const routes: Routes = [
     //muestrame este componente que esta dentro del app component por lo que es GLOBAL
   },
  
-  {
-    path: 'graficas',
-    loadChildren: () => import('./cuenta/cuenta.module').then( m => m.CuentaModule)
-},
+//   {
+//     path: 'graficas',
+//     loadChildren: () => import('./cuenta/cuenta.module').then( m => m.CuentaModule)
+// },
 
 
 ];

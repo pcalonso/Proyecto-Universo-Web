@@ -13,6 +13,7 @@ import { ChartsModule } from 'ng2-charts';
     AppComponent,
     ErrorPageComponent,
    //Aqui tenemos el componente para la pagina de error
+   
   ],
   imports: [
     BrowserModule,

@@ -22,7 +22,7 @@ const rutas: Routes = [
   //{ path : "home", component: HomeComponent},
   { path : "planes", component: PlanesComponent},
   { path : "servicios", component: ServiciosComponent},
-  { path: ":id", component: ServicioComponent},
+  { path: ":id", component: HomeComponent},
  
   ]
 }

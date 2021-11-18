@@ -12,6 +12,7 @@
             <!--Simbolo del Menu-->
 
         <mat-nav-list>
+           
             <a routerLink="./barra"
                 mat-list-item
                 (click)="sidenav.toggle()">
@@ -48,6 +49,12 @@
                 <mat-icon mat-list-icon>email</mat-icon>
                 <span>Contact@</span>
             </a>
+            <a routerLink="../universoweb/home"
+            mat-list-item
+            (click)="sidenav.toggle()">
+            <mat-icon mat-list-icon>home</mat-icon>
+            <span>Home</span>
+        </a>
 
         </mat-nav-list>
 

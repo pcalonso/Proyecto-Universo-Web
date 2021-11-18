@@ -6,15 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
-  
-    //Aqui tenemos el componente para la pagina de error
+   //Aqui tenemos el componente para la pagina de error
   ],
   imports: [
     BrowserModule,
@@ -22,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     //porque necesitamos hacer peticiones http en la "base de datos"
+    ChartsModule
   
   ],
   providers: [],

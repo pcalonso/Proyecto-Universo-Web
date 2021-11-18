@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { AuthGuard } from './auth/guards/auth.guard';
-import { CuentaComponent } from './auth/pages/cuenta/cuenta.component';
+
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: "cuenta",
-    component: CuentaComponent,
+    loadChildren: () => import("./cuenta/cuenta.module"). then ( m=> m.CuentaModule),
     canLoad: [ AuthGuard],
     //Es este modulo el que queremos proteger cuando se logueen
     canActivate: [AuthGuard]
@@ -34,14 +34,17 @@ const routes: Routes = [
     component: ErrorPageComponent
     //muestrame este componente que esta dentro del app component por lo que es GLOBAL
   },
+ 
   {
-    path: "**",
-    //si la ruta esta vacía
-    redirectTo: "404"
-    //sigue mostrandome esta ruta o path
-  },
+    path: 'graficas',
+    loadChildren: () => import('./cuenta/cuenta.module').then( m => m.CuentaModule)
+},
+
+
+];
+
   
-]
+
 
 
 @NgModule({

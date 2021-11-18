@@ -20,7 +20,7 @@ export class LoginComponent  {
       console.log(resp);
 
       if ( resp.id){
-        this.router.navigate (["./auth/cuenta"]);
+        this.router.navigate (["./cuenta"]);
         //queremos que al loguearse, acceda a su cuenta personal
         //que esta dentro de auth/cuenta
       }

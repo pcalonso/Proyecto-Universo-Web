@@ -1,23 +1,39 @@
 
 const { response } = require("express");
+const Usuario = require("../../models/Usuario");
 
-const crearUsuario =(req, res = response )=>{
 
+const crearUsuario = async(req, res = response )=>{
+    
     // console.log( req.body );Asi es como recogemos los datos como un objeto
 
     const { email, name, password } = req.body;
-    console.log(email, name, password);
+
+    try {
+    //Verificar el email
+    let usuario = await Usuario.findOne({email});
+    //Hashear la contraseña
+    //Generar el JWT  que mandamos a Angular para que lo use como autenticación pasiva
+    //Generar respuesta ok
+        
+    } catch (error) {
+
+        console.log(error)
+        return res.status(500).json({
+            ok: false,
+            msg: "Algo salió mal, por favor hable con el administrador"
+        });
+    }
     
-    return res.json({
-        ok: true,
-        msg: "Crear nuevo usuario/new"
-    });
+   
+    
+    
 }
 
-const loginUsuario = (req, res )=>{
+const loginUsuario = (req, res = response )=>{
 
     const { email, password } = req.body;
-    console.log(email, password);
+      
     
     return res.json({
         ok: true,
@@ -37,4 +53,4 @@ module.exports = {
     crearUsuario,
     loginUsuario,
     revalidarToken
-}
+};

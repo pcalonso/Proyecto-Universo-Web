@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -8,25 +10,32 @@ import { AuthService } from '../../services/auth.service';
   styles: [
   ]
 })
-export class LoginComponent  {
+export class LoginComponent {
 
-  constructor( private router: Router,
+  miFormulario: FormGroup = this.fb.group({
+    email:    ['universowe@universoweb.com', [ Validators.required, Validators.email ]],
+    password: ['123456', [ Validators.required, Validators.minLength(6) ]],
+  });
+
+  constructor( private fb: FormBuilder,
+               private router: Router, 
                private authService: AuthService) { }
+
+
   login() {
-    //Iremos al backend
-    //Tiene que existir un usuario
-    //Lo almanezaremos en un servicio
-    this.authService.login().subscribe (resp=> {
-      console.log(resp);
+  
+    const { email, password } = this.miFormulario.value;
 
-      if ( resp.id){
-        this.router.navigate (["./cuenta"]);
-        //queremos que al loguearse, acceda a su cuenta personal
-        //que esta dentro de cuenta
-      }
-    })
-    //this.router.navigate(["./universoweb"])
+    this.authService.login( email, password )
+      .subscribe( ok => {
+
+        if ( ok === true ) {
+          //esto
+          this.router.navigateByUrl('/dashboard');
+        } else {
+          Swal.fire('Error', ok, 'error');
+        }
+      });
   }
-
 
 }

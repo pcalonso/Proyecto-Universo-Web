@@ -7,6 +7,7 @@ import { BasicosComponent } from './basicos/basicos.component';
 import { DinamicosComponent } from './dinamicos/dinamicos.component';
 import { SwitchesComponent } from './switches/switches.component';
 import { CustomMinDirective } from './directives/custom-min.directive';
+import { FormularioComponent } from './formulario/formulario.component';
 
 
 
@@ -15,7 +16,8 @@ import { CustomMinDirective } from './directives/custom-min.directive';
     BasicosComponent,
     DinamicosComponent,
     SwitchesComponent,
-    CustomMinDirective
+    CustomMinDirective,
+    FormularioComponent
     //declaramos la directiva, sino Angular no lo puede "ver"
   ],
   imports: [

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://localhost:3000" 
+  baseUrl: "http://localhost:4000/api" 
   //Aqui colocamos la url de la bdd que tenemos desplegada ya en Postman
 };
 

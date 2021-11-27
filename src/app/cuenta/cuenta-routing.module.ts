@@ -6,7 +6,7 @@ import { DonaHttpComponent } from './pages/dona-http/dona-http.component';
 import { MicuentaComponent } from './pages/micuenta/micuenta.component';
 import { ServiciosComponent } from '../universoweb/pages/servicios/servicios.component';
 import { EquipoComponent } from '../universoweb/pages/equipo/equipo.component';
-import { ContactoComponent } from '../universoweb/pages/contacto/contacto.component';
+// import { ContactoComponent } from '../universoweb/pages/contacto/contacto.component';
 import { HomeComponent } from '../universoweb/pages/home/home.component';
 const routes: Routes = [
   {
@@ -19,8 +19,9 @@ const routes: Routes = [
      // { path: "**", redirectTo: "error-page" },
       { path: "servicios", component: ServiciosComponent},
       { path: "equipo", component: EquipoComponent },
-      { path: "contacto", component: ContactoComponent},
-      { path: "home", component: HomeComponent}
+      // { path: "contacto", component: ContactoComponent},
+      { path: "home", component: HomeComponent},
+      // { path: "contacto", component:ContactoComponent }
       ]
   }
 ];

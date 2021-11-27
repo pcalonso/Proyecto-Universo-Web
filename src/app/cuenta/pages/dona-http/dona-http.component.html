@@ -1,16 +1,16 @@
-<h1>Plan RSS</h1>
+<!-- <h1>Plan RSS</h1>
 <hr>
 
 <div *ngIf="doughnutChartData.length === 0; else divGrafica"
-        class="alert alert-info">
+        class="alert alert-info"> -->
         <!--Si no tenenmos datos, muestrame el Cargando data..., sino "ngIfElse" muestrame la gráfica-->
-    Cargando data...
+    <!-- Cargando data...
 </div>
 
 
-<div class="row" >
+<div class="row" > -->
     <!--Aqui colocamos la referencia local para que Angular sepa de que hablamos-->
-    <div class="col">
+    <!-- <div class="col">
 
         <ng-template #divGrafica>
             <div style="display: block">
@@ -18,14 +18,44 @@
                   [data]="doughnutChartData"
                   [labels]="doughnutChartLabels"
                   [chartType]="doughnutChartType"
-                  [colors]="colors">
+                  [colors]="colors"> -->
                   <!--En Dona aqui tenemos que definir los colores, con un arreglo-->
-                </canvas>
+                <!-- </canvas>
               </div>
 
               <span class="float-end text-primary"> Información en billones de usuarios</span>
         </ng-template>
    </div>
-</div>        
+</div>         -->
 
 
+
+
+
+<mat-form-field class="example-form-field" appearance="fill">
+  <mat-label>Primer tramo de Proyecto</mat-label>
+  <mat-date-range-input
+    formGroup="campaignOne"
+    [rangePicker]="campaignOnePicker"
+    [comparisonStart]="campaignTwo.value.start"
+    [comparisonEnd]="campaignTwo.value.end">
+    <input matStartDate placeholder="Start date" formControlName="start">
+    <input matEndDate placeholder="End date" formControlName="end">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+  <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+</mat-form-field>
+
+<mat-form-field class="example-form-field" appearance="fill">
+  <mat-label>Segundo Tramo de Proyecto</mat-label>
+  <mat-date-range-input
+    formGroup="campaignTwo"
+    [rangePicker]="campaignTwoPicker"
+    [comparisonStart]="campaignOne.value.start"
+    [comparisonEnd]="campaignOne.value.end">
+    <input matStartDate placeholder="Start date" formControlName="start">
+    <input matEndDate placeholder="End date" formControlName="end">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matSuffix [for]="campaignTwoPicker"></mat-datepicker-toggle>
+  <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>
+</mat-form-field>

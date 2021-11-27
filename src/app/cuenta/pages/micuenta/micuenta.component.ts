@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 
-import { Auth } from 'src/app/auth/interfaces/auth.interface';
+import { Usuario } from 'src/app/auth/interfaces/auth.interface';
 import { AuthService } from '../../../auth/services/auth.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class MicuentaComponent implements OnInit {
   //auth!:Auth;
   get auth(){
     //Es este auth el que vamos a pasar al home.html
-    return this.authService.auth;
+    return this.authService.usuario;
   }
 
   constructor( private router:Router,

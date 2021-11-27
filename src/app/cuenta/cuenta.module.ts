@@ -9,8 +9,9 @@ import { DonaHttpComponent } from './pages/dona-http/dona-http.component';
 import { GraficaBarraComponent } from './components/grafica-barra/grafica-barra.component';
 import { MicuentaComponent } from './pages/micuenta/micuenta.component';
 import { MaterialModule } from '../material/material.module';
+// import { ContactoComponent } from '../universoweb/pages/contacto/contacto.component';
 
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { MaterialModule } from '../material/material.module';
     DonaHttpComponent,
     GraficaBarraComponent,
     MicuentaComponent,
+    // ContactoComponent
+   
  
 
  
@@ -28,7 +31,8 @@ import { MaterialModule } from '../material/material.module';
     CommonModule,
     CuentaRoutingModule,
     ChartsModule,
-    MaterialModule
+    MaterialModule,
+    MatDatepickerModule
  
   ]
 })

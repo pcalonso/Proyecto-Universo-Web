@@ -1,14 +1,15 @@
+<br>
+<h3> Bienvenido a tu cuenta</h3>
+<div class="row mt-5">
 
-<hr>
-<router-outlet></router-outlet>
-
-<!-- Todas las rutas hijas, quiero que aparezcan aqui, en la madre que es Home. Este es
-el segundo router-outler, recordemos que el principal lo tenemos en el html de app-->
-
- <mat-sidenav-container fullscreen>
+  <!-- <div class="col-md-3 col-sm-9">
+   <app-menu></app-menu>
+  </div> -->
+  
+  <mat-sidenav-container fullscreen>
     <mat-sidenav #sidenav mode="push">
         <mat-toolbar color="primary">
-            <span>Menú</span>
+            <span>Bienvenid@ a tu Cuenta</span>
             
         <span class="spacer"></span>
             <button mat-icon-button
@@ -18,40 +19,35 @@ el segundo router-outler, recordemos que el principal lo tenemos en el html de a
         </mat-toolbar> 
 
         <mat-nav-list>
-            <a routerLink="./home"
+            <a routerLink="./universoweb"
                 mat-list-item
                 (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>home</mat-icon>
                 <span>Home</span>
             </a>
-            <a routerLink="./buscar"
+            <a routerLink="./barras"
                 mat-list-item
                 (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>search</mat-icon>
-                <span>Buscar</span>
+                <mat-icon mat-list-icon>timeline</mat-icon>
+                <span>Evolución Planes</span>
             </a>
-            <a routerLink="./planes"
+            <a routerLink="./dona"
                 mat-list-item
                 (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>backpack</mat-icon>
-                <span>Planes</span>
+                <mat-icon mat-list-icon>grading</mat-icon>
+                <span>Planificación Proyecto</span>
             </a>
-            <a routerLink="./servicios"
+            <a routerLink="./dona-http"
                 mat-list-item
                 (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>miscellaneous_services</mat-icon>
-                <span>Servicios</span>
+                <mat-icon mat-list-icon>rocket_launch</mat-icon>
+                <span>Plan Individual</span>
             </a>
-            <a routerLink="./equipo"
-                mat-list-item
-                (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>supervised_user_circle</mat-icon>
-                <span>Equipo</span>
-            </a>
+          
             <a routerLink="./contacto"
                 mat-list-item
                 (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>email</mat-icon>
+                <mat-icon mat-list-icon>support_agent</mat-icon>
                 <span>Contacto</span>
             </a>
 
@@ -67,11 +63,6 @@ el segundo router-outler, recordemos que el principal lo tenemos en el html de a
 
         <span class="spacer"></span>
 
-        <span>{{ auth.uid }}</span>
-        <!-- Y metemos aqui lo definido en home component linea 19 -->
-        <button mat-button (click)="login()">
-            Logout
-        </button>
     </mat-toolbar>  
     
     <div class="container">
@@ -79,3 +70,4 @@ el segundo router-outler, recordemos que el principal lo tenemos en el html de a
     </div>
 
 </mat-sidenav-container> -->
+

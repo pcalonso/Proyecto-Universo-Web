@@ -31,7 +31,7 @@ export class RegistroComponent {
       .subscribe( ok => {
 
         if ( ok === true ) {
-          this.router.navigateByUrl('./dashboard');
+          this.router.navigateByUrl('./account/micuenta');
         } else {
           Swal.fire('Error', ok, 'error');
         }

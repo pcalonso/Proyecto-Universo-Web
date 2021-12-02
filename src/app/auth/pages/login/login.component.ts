@@ -13,8 +13,8 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent {
 
   miFormulario: FormGroup = this.fb.group({
-    email:    ['universowe@universoweb.com', [ Validators.required, Validators.email ]],
-    password: ['123456', [ Validators.required, Validators.minLength(6) ]],
+    email:    ['durero3@museodelprado.com', [ Validators.required, Validators.email ]],
+    password: ['222888', [ Validators.required, Validators.minLength(6) ]],
   });
 
   constructor( private fb: FormBuilder,
@@ -31,7 +31,7 @@ export class LoginComponent {
 
         if ( ok === true ) {
           //esto
-          this.router.navigateByUrl('/dashboard');
+          this.router.navigateByUrl('/micuenta');
         } else {
           Swal.fire('Error', ok, 'error');
         }

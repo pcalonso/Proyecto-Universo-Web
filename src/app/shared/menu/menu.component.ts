@@ -20,9 +20,9 @@ interface MenuItem {
 export class MenuComponent  {
 
     menu: MenuItem[] = [
-      {ruta: "/grafica/barra", texto: "Evolución Planes" },
-      {ruta: "/grafica/dona", texto: "Proporción Proyecto" },
-      {ruta: "/grafica/dona-http", texto: "Plan RSS" },
+      {ruta: "/micuenta/barras", texto: "Evolución Planes" },
+      {ruta: "/micuenta/dona", texto: "Proporción Proyecto" },
+      {ruta: "/micuenta/dona-http", texto: "Plan RSS" },
     ];
  }
 

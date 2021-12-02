@@ -1,50 +1,29 @@
-// import { NgModule } from '@angular/core';
-// import { BrowserModule } from '@angular/platform-browser';
 
-// import { AppComponent } from './app.component';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { ErrorPageComponent } from './shared/error-page/error-page.component';
-// import { AppRoutingModule } from './app-routing.module';
-// import { HttpClientModule } from '@angular/common/http';
-// import { ChartsModule } from 'ng2-charts';
-// import { FormBuilder } from '@angular/forms';
-
-// @NgModule({
-//   declarations: [
-//     AppComponent,
-//     ErrorPageComponent,
-//    //Aqui tenemos el componente para la pagina de error
-   
-//   ],
-//   imports: [
-//     BrowserModule,
-//     BrowserAnimationsModule,
-//     AppRoutingModule,
-//     HttpClientModule,
-//     //porque necesitamos hacer peticiones http en la "base de datos"
-//     ChartsModule,
-   
-  
-//   ],
-//   providers: [],
-//   bootstrap: [AppComponent]
-// })
-// export class AppModule { }
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { MaterialModule } from './material/material.module';
+import { UniversowebModule } from './universoweb/universoweb.module';
+import { ErrorPageComponent } from './shared/error-page/error-page.component';
+import { HomeComponent } from './universoweb/pages/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule,
+    UniversowebModule,
+    BrowserAnimationsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

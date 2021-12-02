@@ -33,9 +33,10 @@ import { ServicioComponent } from './pages/servicio/servicio.component';
     //importamos aqui el flex layout
     UniversowebRoutingModule,
     //como el routing y el module pertenecen a lo mismo, hay que unirlos
-    MaterialModule
+    MaterialModule,
     //todo lo exportado en el material modulo, va a ser importado aqui
-  ]
+  ],
+  
 })
 export class UniversowebModule { }
 //No se exporta nada porque vamos a cargar de "manera perezosa"

@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PlanesComponent } from './pages/planes/planes.component';
 import { ServicioComponent } from './pages/servicio/servicio.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
+// import { AppComponent } from '../app.component';
 
 
 
@@ -14,19 +15,20 @@ const rutas: Routes = [
   {
     path: "",
     component: HomeComponent,
+
     //creamos este componente en el que quiero estar cuando esté en este path 
     children: [
   { path : "buscar", component: BuscarComponent},
   { path : "contacto", component: ContactoComponent},
   { path : "equipo", component: EquipoComponent},
-  //{ path : "home", component: HomeComponent},
+  // { path : "home", component: HomeComponent},
   { path : "planes", component: PlanesComponent},
   { path : "servicios", component: ServiciosComponent},
-  { path: ":id", component: ServicioComponent},
+  { path: ":id", component: ServiciosComponent}
  
   ]
 }
-]
+];
 
 
 

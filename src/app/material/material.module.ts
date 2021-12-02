@@ -47,57 +47,25 @@ import {MatSliderModule} from '@angular/material/slider';
 import {TextFieldModule} from '@angular/cdk/text-field';
 import {MatStepperModule} from '@angular/material/stepper';
 
-@NgModule({ declarations: [],
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatBadgeModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatGridListModule,
-    MatMenuModule,
-    LayoutModule,
-    MatSidenavModule,
-    MatListModule,
-    MatTooltipModule,
-    MatExpansionModule,
-    MatFormFieldModule,
-    MatTableModule,
-    MatChipsModule,
-    MatNativeDateModule,
-    MatDatepickerModule,
-    MatInputModule,
-    MatPaginatorModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatSlideToggleModule,
-    MatDividerModule,
-    MatSnackBarModule,
-    MatProgressSpinnerModule,
-    MatDialogModule,
-    MatCheckboxModule,
-    MatSortModule,
-    ScrollingModule,
-    MatTabsModule,
-    CdkTableModule,
-    MatAutocompleteModule,
-    MatSliderModule,
-    TextFieldModule,
-    MatStepperModule
-  ],
+@NgModule({ 
+ 
   exports: [
+  //   //aqui vamos a exportar los modulos que vamos a necesitar de Angular Material
+  //   MatSidenavModule,
+  //   //exportamos sidenav porque necesito usarlo en otros modulos
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
+    MatGridListModule,
+    MatFormFieldModule,
     CommonModule,
     MatButtonModule,
-    MatButtonToggleModule,
-    MatBadgeModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
     MatGridListModule,
-    MatMenuModule,
-    LayoutModule,
     MatSidenavModule,
     MatListModule,
     MatTooltipModule,
@@ -124,56 +92,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatAutocompleteModule,
     MatProgressBarModule,
     MatSliderModule,
-    TextFieldModule,
-    MatStepperModule
+    TextFieldModule
+    
   ]
-  // exports: [
-  //   //aqui vamos a exportar los modulos que vamos a necesitar de Angular Material
-  //   MatSidenavModule,
-  //   //exportamos sidenav porque necesito usarlo en otros modulos
-  //   MatToolbarModule,
-  //   MatButtonModule,
-  //   MatIconModule,
-  //   MatListModule,
-  //   MatCardModule,
-  //   MatGridListModule,
-  //   MatFormFieldModule,
-  //   CommonModule,
-  //   MatButtonModule,
- 
-  //   MatToolbarModule,
-  //   MatIconModule,
-  //   MatCardModule,
-  //   MatGridListModule,
-    
-  //   MatSidenavModule,
-  //   MatListModule,
-  //   MatTooltipModule,
-  //   MatExpansionModule,
-  //   MatFormFieldModule,
-  //   MatTableModule,
-  //   MatChipsModule,
-  //   MatNativeDateModule,
-  //   MatDatepickerModule,
-  //   MatInputModule,
-  //   MatPaginatorModule,
-  //   MatRadioModule,
-  //   MatSelectModule,
-  //   MatSlideToggleModule,
-  //   MatDividerModule,
-  //   MatSnackBarModule,
-  //   MatProgressSpinnerModule,
-  //   MatDialogModule,
-  //   MatCheckboxModule,
-  //   MatSortModule,
-  //   ScrollingModule,
-  //   MatTabsModule,
-  //   CdkTableModule,
-  //   MatAutocompleteModule,
-  //   MatProgressBarModule,
-  //   MatSliderModule,
-  //   TextFieldModule
-    
-  // ]
 })
 export class MaterialModule { }

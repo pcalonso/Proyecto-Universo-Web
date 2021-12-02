@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%;}
 body { margin: 0; font-family: Roboto, "Condensed", sans-serif; }
 .spacer {
     flex: 1 1 auto;
@@ -257,7 +256,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     left: 0;
     width: 0;
     height: 2px;
-    background: #7f7f7f;
+    background: white;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;

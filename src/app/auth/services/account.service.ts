@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class CuentaService {
+export class AccountService {
 
   constructor( private http: HttpClient) { }
   //Lo  inyectamos aqui y ahora creamos un método que nos sirva

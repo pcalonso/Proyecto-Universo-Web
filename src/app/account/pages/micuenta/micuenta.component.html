@@ -1,12 +1,14 @@
-<br>
-<h3> Bienvenido a tu cuenta</h3>
-<div class="row mt-5">
+
+<hr>
+<router-outlet></router-outlet><br>
+
 
   <!-- <div class="col-md-3 col-sm-9">
    <app-menu></app-menu>
   </div> -->
   
   <mat-sidenav-container fullscreen>
+     
     <mat-sidenav #sidenav mode="push">
         <mat-toolbar color="primary">
             <span>Bienvenid@ a tu Cuenta</span>
@@ -19,6 +21,7 @@
         </mat-toolbar> 
 
         <mat-nav-list>
+            
             <a routerLink="./universoweb"
                 mat-list-item
                 (click)="sidenav.toggle()">
@@ -54,7 +57,7 @@
         </mat-nav-list>
 
     </mat-sidenav> 
-
+    
     <mat-toolbar>
         <button mat-icon-button
         (click)="sidenav.toggle()">
@@ -64,10 +67,8 @@
         <span class="spacer"></span>
 
     </mat-toolbar>  
-    
     <div class="container">
         <router-outlet></router-outlet>
     </div>
-
-</mat-sidenav-container> -->
-
+    
+</mat-sidenav-container> 

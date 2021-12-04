@@ -1,0 +1,25 @@
+
+mat-card{
+  margin-top: 10px
+}
+mat-card{
+  margin-left: 100px
+}
+mat-card{
+  margin-bottom: 300px
+}
+mat-card{
+  margin-right: 100px
+}
+.mat-card {
+ 
+  background-color: #e4ddd2 !important
+}
+.mat-toolbar-row{
+  background-color: #d9a036 !important
+}
+
+h1 {
+
+  margin: 20px !important;
+}

@@ -6,8 +6,7 @@ import { AccountService } from 'src/app/auth/services/account.service';
 @Component({
   selector: 'app-dona-http',
   templateUrl: './donahttp.component.html',
-  styles: [
-  ]
+  styleUrls: ['./donahttp.component.css']
 })
 export class DonaHttpComponent implements OnInit {
 

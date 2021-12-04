@@ -64,7 +64,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   
   a:hover {
       text-decoration: none;
-    color: #a64bf4;
+    color: #4bcdf4;
   }
   
   /*---------------------------------------------*/
@@ -294,7 +294,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
   
   .wrap-login100-form-btn {
-    width: 100%;
+    width: 50%;
     display: block;
     position: relative;
     z-index: 1;
@@ -2912,4 +2912,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   -ms-align-items: center;
   align-items: center;
   }
-  
+  .mat-toolbar.mat-primary {
+    background-color: #142b73;
+  }

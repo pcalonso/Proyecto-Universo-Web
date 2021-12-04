@@ -1,24 +1,30 @@
 
-<h1>Evolución planes</h1>
-<hr>
+<h1>Evolución de los Planes</h1>
+<mat-divider></mat-divider>
+<br>
 
-<div class="row">
-    <div class="col">
-        <div style="display: block">
-            <canvas baseChart
-              [datasets]="barChartData"
-              [labels]="barChartLabels"
-              [options]="barChartOptions"
-              [legend]="barChartLegend"
-              [chartType]="barChartType">
-            </canvas>
-        </div>
-        <button (click)="randomize()"
-                class="btn btn-primary float-end"
-                >Actualizar 
-        </button>
-    </div>
-</div>
+    <mat-card>
+      <span class="spacer"></span>
+      <button (click)="randomize()"
+      class="btn btn-primary float-end"
+      >Actualizar 
+      </button>
+      <div class="row">
+          <div class="col">
+              <div style="display: block">
+                  <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType">
+                  </canvas>
+              </div>
+              
+          </div>
+      </div>
+    </mat-card> 
+        
 
 
-
+ 

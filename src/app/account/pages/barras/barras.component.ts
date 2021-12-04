@@ -5,8 +5,8 @@ import { Label } from 'ng2-charts';
 @Component({
   selector: 'app-barras',
   templateUrl: './barras.component.html',
-  styles: [
-  ]
+  styleUrls: ['./barras.component.css']
+
 })
 export class BarrasComponent implements OnInit {
 

@@ -5,8 +5,9 @@ import { Color, Label, MultiDataSet } from 'ng2-charts';
 @Component({
   selector: 'app-dona',
   templateUrl:'./dona.component.html',
-  styles: [
-  ]
+  styleUrls: ['./dona.component.css']
+ 
+  
 })
 export class DonaComponent {
 

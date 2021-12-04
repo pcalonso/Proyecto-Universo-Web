@@ -1,1 +1,33 @@
-<p>equipo works!</p>
+<h1>Equipo de UW</h1>
+<mat-divider></mat-divider>
+
+<mat-list>
+    <div mat-subheader>Diseño</div>
+    <mat-list-item *ngFor="let disenio of disenio">
+      <mat-icon mat-list-icon>design_services</mat-icon>
+      <div mat-line>{{disenio.name}}</div>
+      <div mat-line> {{disenio.updated | date}} </div>
+      
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <div mat-subheader>RSS</div>
+    <mat-list-item *ngFor="let rss of rss">
+      <mat-icon mat-list-icon>rss_feed</mat-icon>
+      <div mat-line>{{rss.name}}</div>
+      <div mat-line> {{rss.updated | date}} </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <div mat-subheader>Desarrollo</div>
+    <mat-list-item *ngFor="let desarrollo of desarrollo">
+      <mat-icon mat-list-icon>code</mat-icon>
+      <div mat-line>{{desarrollo.name}}</div>
+      <div mat-line> {{desarrollo.updated | date}} </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <div mat-subheader>SEO</div>
+    <mat-list-item *ngFor="let seo of seo">
+      <mat-icon mat-list-icon>spellcheck</mat-icon>
+      <div mat-line>{{seo.name}}</div>
+      <div mat-line> {{seo.updated | date}} </div>
+    </mat-list-item>
+  </mat-list>

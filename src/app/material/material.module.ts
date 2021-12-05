@@ -47,6 +47,7 @@ import {MatSliderModule} from '@angular/material/slider';
 import {TextFieldModule} from '@angular/cdk/text-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatRippleModule} from '@angular/material/core';
+
 @NgModule({ 
  
   exports: [
@@ -93,7 +94,8 @@ import {MatRippleModule} from '@angular/material/core';
     MatProgressBarModule,
     MatSliderModule,
     TextFieldModule,
-    MatRippleModule
+    MatRippleModule,
+    MatDatepickerModule
     
   ]
 })

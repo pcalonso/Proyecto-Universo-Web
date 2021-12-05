@@ -32,6 +32,9 @@ export class LoginComponent {
         if ( ok === true ) {
           //esto
           this.router.navigateByUrl('/micuenta');
+          if (  email === "personal@gmail.com"){
+            this.router.navigateByUrl("/space");
+          }
         } else {
           Swal.fire('Error', ok, 'error');
         }

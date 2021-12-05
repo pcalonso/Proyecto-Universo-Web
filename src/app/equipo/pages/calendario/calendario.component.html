@@ -1,0 +1,23 @@
+<h1>Organización</h1>
+
+<mat-form-field appearance="fill">
+    <mat-label>Reuniones Proyecto 1</mat-label>
+    <input matInput [matDatepicker]="picker1" formControl="date">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Reuniones Proyecto 2</mat-label>
+    <input matInput [matDatepicker]="picker2"
+           formControl="serializedDate">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Reuniones Proyecto 3</mat-label>
+    <input matInput [matDatepicker]="picker3" [value]="date.value">
+    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+    <mat-datepicker #picker3></mat-datepicker>
+  </mat-form-field>

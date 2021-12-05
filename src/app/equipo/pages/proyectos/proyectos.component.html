@@ -1,0 +1,74 @@
+
+<h1>Proyectos</h1>
+<mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Datos Cliente Proyecto 1
+        </mat-panel-title>
+        <mat-panel-description>
+          cliente1@gmail.com
+          <mat-icon>account_circle</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Leonardo Da Vinci</mat-label>
+        <input matInput>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Reuniones Realizadas</mat-label>
+        <input matInput type="number" min="1">
+      </mat-form-field>
+      <mat-action-row>
+        <button mat-button color="primary" (click)="nextStep()">Ok</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          www.laultimacena.com
+        </mat-panel-title>
+        <mat-panel-description>
+          Prototipos 
+          <mat-icon>map</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Link</mat-label>
+        <input matInput>
+      </mat-form-field>
+  
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Ok</button>
+        <button mat-button color="primary" (click)="nextStep()">Siguiente</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Establecer Reunión
+        </mat-panel-title>
+        <mat-panel-description>
+          Confirmar
+          <mat-icon>date_range</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Elige</mat-label>
+        <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+      </mat-form-field>
+      <mat-datepicker #picker></mat-datepicker>
+  
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Ok</button>
+        <button mat-button color="primary" (click)="nextStep()">Finalizar</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+  </mat-accordion>

@@ -1,0 +1,73 @@
+<hr>
+<router-outlet></router-outlet><br>
+
+
+  <!-- <div class="col-md-3 col-sm-9">
+   <app-menu></app-menu>
+  </div> -->
+  
+  <mat-sidenav-container fullscreen>
+     
+    <mat-sidenav #sidenav mode="push">
+        <mat-toolbar color="primary">
+            <span>Bienvenid@ Equipo</span>
+            
+        <span class="spacer"></span>
+            <button mat-icon-button
+            (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar> 
+
+        <mat-nav-list>
+            
+            <a routerLink="./universoweb"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <span>Home</span>
+            </a>
+            <a routerLink="./graf"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>trending_up</mat-icon>
+                <span>Evolución de Proyectos</span>
+            </a>
+            <a routerLink="./calendario"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>event_note</mat-icon>
+                <span>Organización</span>
+            </a>
+            <a routerLink="./proyectos"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>group_add</mat-icon>
+                <span>Proyectos</span>
+            </a>
+          
+            <a routerLink="./wireframes"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>vertical_split</mat-icon>
+                <span>Wireframes</span>
+            </a>
+
+        </mat-nav-list>
+
+    </mat-sidenav> 
+    
+    <mat-toolbar>
+        <button mat-icon-button
+        (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span class="spacer"></span>
+
+    </mat-toolbar>  
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+    
+</mat-sidenav-container> 

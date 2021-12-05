@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AccountRoutingModule } from './account-routing.module';
@@ -14,6 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { HomeComponent } from '../universoweb/pages/home/home.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 @NgModule({
   declarations: [
     MicuentaComponent,
@@ -21,6 +22,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     DonaComponent,
     DonaHttpComponent,
     MenuComponent,
+    
     
     
   ],

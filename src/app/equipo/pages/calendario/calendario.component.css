@@ -1,0 +1,27 @@
+.mat-calendar-body{
+    background: #142559 !important;
+    color: #fff
+}
+.mat-focus-indicator{
+    background: #142559 !important;
+}
+.mat-calendar-body-selected {
+    background-color: #142559;
+    color: #fff;
+}
+
+.mat-form-field{
+    margin-top: 10px;
+  
+    margin-left: 40px;
+ 
+    margin-bottom: 300px;
+  
+    margin-right: 100px;
+  
+    background-color: #d9a036 !important
+}
+  h1 {
+
+    margin: 20px !important
+  }

@@ -1,0 +1,26 @@
+.mat-expansion-panel-header{
+    background-color: #d9a036;
+    margin-top: 10px;
+  
+    margin-left: 10px;
+ 
+    margin-bottom: 10px;
+  
+    margin-right: 50px;
+}
+.mat-button.mat-warn{
+    color: #d9a036
+}
+.mat-button.mat-primary{
+    color: #43733C
+}
+
+.mat-expansion-panel{
+    margin-left: 20px;
+    margin-right: 40px;
+    background: #142559;
+} 
+h1 {
+
+    margin: 20px !important
+  }

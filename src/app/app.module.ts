@@ -7,13 +7,14 @@ import { AppComponent } from './app.component';
 
 import { MaterialModule } from './material/material.module';
 import { UniversowebModule } from './universoweb/universoweb.module';
-import { ErrorPageComponent } from './shared/error-page/error-page.component';
-import { HomeComponent } from './universoweb/pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { PersonalModule } from './personal/personal.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    
    
   ],
   imports: [
@@ -23,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MaterialModule,
     UniversowebModule,
     BrowserAnimationsModule,
+ 
     
   ],
   providers: [],

@@ -47,7 +47,7 @@
                 <span>Plan Individual</span>
             </a>
           
-            <a routerLink="./contacto"
+            <a routerLink="/contacto"
                 mat-list-item
                 (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>support_agent</mat-icon>
@@ -66,9 +66,12 @@
 
         <span class="spacer"></span>
 
-    </mat-toolbar>  
+    </mat-toolbar> 
+    <div class="container-login100" style="background-image: url('../../../../assets/images/universo.jpg');">
+        <div class="wrap-login100 "> 
     <div class="container">
         <router-outlet></router-outlet>
     </div>
-    
+    </div>
+    </div>
 </mat-sidenav-container> 

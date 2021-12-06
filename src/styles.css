@@ -315,7 +315,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 300%;
     height: 100%;
     background: rgb(96,207,220);
-    background: linear-gradient(90deg, rgba(96,207,220,1) 0%, rgba(190,52,218,1) 92%);
+    background: #142b73;
     top: 0;
     left: -100%;
   

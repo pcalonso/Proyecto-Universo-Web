@@ -1,0 +1,30 @@
+h2 {
+    margin-left: 3rem !important;
+}
+form{
+    margin-left: 3rem !important;
+}
+input{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.ngcontent-eqk-c310{
+    margin-top: 10rem;
+}
+textarea{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+button:hover{
+   
+    font: white;
+}
+ .float-end{
+    margin-left:5rem !important;
+    margin-top: 0rem;
+}
+
+.col{
+    
+    margin-left: 3rem !important;
+}

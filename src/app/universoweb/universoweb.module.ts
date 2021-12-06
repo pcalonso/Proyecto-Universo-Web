@@ -12,6 +12,7 @@ import { UniversowebRoutingModule } from './universoweb-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material/material.module';
 import { ServicioComponent } from './pages/servicio/servicio.component';
+import { ContactoModule } from '../contacto/contacto.module';
 
 
 
@@ -35,6 +36,7 @@ import { ServicioComponent } from './pages/servicio/servicio.component';
     //como el routing y el module pertenecen a lo mismo, hay que unirlos
     MaterialModule,
     //todo lo exportado en el material modulo, va a ser importado aqui
+    ContactoModule
   ],
   
 })

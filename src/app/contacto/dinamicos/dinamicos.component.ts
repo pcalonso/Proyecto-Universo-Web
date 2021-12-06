@@ -16,7 +16,7 @@ interface Plan{
 @Component({
   selector: 'app-dinamicos',
   templateUrl: './dinamicos.component.html',
-  styles: [
+  styleUrls: ["./dinamicos.component.css"
   ]
 })
 export class DinamicosComponent implements OnInit {

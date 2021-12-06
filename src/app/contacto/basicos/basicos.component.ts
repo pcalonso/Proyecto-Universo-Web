@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-basicos',
   templateUrl: './basicos.component.html',
-  styles: [
+  styleUrls: ["./basicos.component.css",
   ]
 })
 export class BasicosComponent implements OnInit {

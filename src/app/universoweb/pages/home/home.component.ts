@@ -6,11 +6,9 @@ import { Usuario } from '../../interfaces/auth.interface';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styles: [`
-    .container {
-      margin: 25px;
-    }
-  `
+  styleUrls: ["./home.component.css"
+    
+  
   ]
 })
 export class HomeComponent implements OnInit {

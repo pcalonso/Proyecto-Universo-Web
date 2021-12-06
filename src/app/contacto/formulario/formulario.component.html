@@ -1,4 +1,63 @@
 
+<mat-sidenav-container fullscreen>
+     
+    <mat-sidenav #sidenav mode="push">
+        <mat-toolbar color="primary">
+            <span>UW Contacto</span>
+            
+        <span class="spacer"></span>
+            <button mat-icon-button
+            (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar> 
 
+        <mat-nav-list>
+            
+            <a routerLink="./universoweb"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <span>Volver a UW</span>
+            </a>
+            <a routerLink="./basicos"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>speaker_notes</mat-icon>
+                <span>Consulta Básica</span>
+            </a>
+            <a routerLink="./dinamicos"
+                mat-list-item
+                (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>dynamic_form</mat-icon>
+                <span>Relacionada con los Servicios de UW</span>
+            </a>
+        
+        </mat-nav-list>
 
+    </mat-sidenav> 
+    
+    <mat-toolbar>
+        <button mat-icon-button
+        (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span class="spacer"></span>
+
+    </mat-toolbar>  
+    <div class="container">
+       
+        <router-outlet></router-outlet>
+    </div>
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('../../../../assets/images/contacto.jpg');">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                <h2>  CONTACTA CON UW </h2>
+                <router-outlet></router-outlet>
+    
+            </div>
+        </div>
+    </div>
+</mat-sidenav-container> 
 

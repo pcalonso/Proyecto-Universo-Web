@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ValidarTokenGuard } from './auth/guards/auth.guard';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { EquipoComponent } from './universoweb/pages/equipo/equipo.component';
+import { ContactoComponent } from './universoweb/pages/contacto/contacto.component';
 
 
 
@@ -28,6 +29,10 @@ const routes: Routes = [
     path: "universoweb",
     loadChildren: () => import("./universoweb/universoweb.module"). then( m=> m.UniversowebModule),
    
+  },
+  {
+    path: "contacto",
+    loadChildren: () => import("./contacto/contacto.module"). then(m=> m.ContactoModule),
   },
 
   {

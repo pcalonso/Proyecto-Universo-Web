@@ -1,4 +1,4 @@
-<h2>Template: Dinámicos</h2>
+<h2>Consulta sobre los Servicios de UW</h2>
 <hr>
 
 <form (ngSubmit)="enviar( )" #miFormulario='ngForm' autocomplete="off">
@@ -20,21 +20,22 @@
 
     <div class="form-group">
         <label for ="email">Email</label>
+        <div class="col-sm-9"></div>
         <input type="text" 
                class="form-control" 
                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
                id="email"
                name="email" 
-               
                ngModel #emailref="ngModel"
                required>
-        <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" 
+               <span class="form-text text-danger"
+         *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" 
               class ="aler alert-danger">
-        <div [hidden]="!emailref.errors?.pattern">
-            Email invalido
+        <!-- <div [hidden]="!emailref.errors?.pattern"> -->
+            Email invalido</span>
+        <!-- </div>  -->
         </div> 
-        </div> 
-    </div>
+    
 
     <!--Agregar Plan-->
     <div class="mb-3 row">
@@ -59,9 +60,9 @@
     </div>
 
 
-    <!--Lista de Juegos Favoritos-->
+    <!--Lista de Servicios-->
     <div class="mb-3 row">
-        <label class="col-sm-3 col-form-label">Estoy interesad@ en</label>
+        <label class="col-sm-3 col-form-label">Estoy interesad@ en :</label>
         <div class="col-sm-9">
             <div class="input-group  mb-1" *ngFor="let plan of persona.plan; let i=index">
                 <input [(ngModel)]="plan.nombre"
@@ -92,3 +93,4 @@
 
 <span>Persona</span>
 <pre>{{ persona | json}}</pre>
+

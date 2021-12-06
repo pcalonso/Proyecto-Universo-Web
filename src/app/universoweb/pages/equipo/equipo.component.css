@@ -8,3 +8,17 @@
 .mat-subheader {
     color: #d9a036
 }
+.p-r-55 {
+    padding-right: 100px !important;
+}
+
+.ng-star-inserted{
+    width: 100% !important;
+
+}
+.limiter{
+    width: 100%
+}
+.contenedor{
+    width: 100%;
+}

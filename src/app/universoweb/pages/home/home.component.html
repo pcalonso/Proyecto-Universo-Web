@@ -48,7 +48,7 @@ el segundo router-outler, recordemos que el principal lo tenemos en el html de a
                 <mat-icon mat-list-icon>supervised_user_circle</mat-icon>
                 <span>Equipo</span>
             </a>
-            <a routerLink="./contacto"
+            <a routerLink="/contacto"
                 mat-list-item
                 (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>email</mat-icon>
@@ -73,9 +73,12 @@ el segundo router-outler, recordemos que el principal lo tenemos en el html de a
             Logout
         </button>
     </mat-toolbar>  
-    
+    <div class="container-login100" style="background-image: url('../../../../assets/images/universo.jpg');">
+        <div class="wrap-login100 ">
+            <h2>UNIVERSO WEB</h2>
     <div class="container">
         <router-outlet></router-outlet>
     </div>
-
+</div>
+    </div>
 </mat-sidenav-container> -->

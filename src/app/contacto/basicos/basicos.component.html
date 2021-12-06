@@ -1,10 +1,13 @@
+
 <h2>Rellena los campos y en breve te atenderemos</h2>
 <hr>
 
 
+
 <!--Nombre-->
-<div class="row">
-    <div class="col">
+<div class="row" ></div>
+   <p>
+    <div class="col-4" >
         <form (ngSubmit)="enviar( )" #miFormulario="ngForm" autocomplete="off">
                 <label class="col-sm-3 col-form-label">Nombre</label>
                 <div class="col-sm-9">
@@ -25,35 +28,40 @@
                     El código se ha enviado a basicos.components para simplificar aqui-->
     </div>
 
-
+   
 
 <!--Email-->
                     <div class="form-group">
                         <label class="col-sm-3 col-form-label"></label>
-                       
                         <label for ="email">Email</label>
-                       
+                        <div class="col-sm-9"></div>
                         <input type="text" 
                                class="form-control" 
                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
                                id="email"
-                               name="email" 
-                               
+                               name="email"
+                               placeholder="universo@universo.com" 
                                ngModel #emailref="ngModel"
                                required>
-                        <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" 
+                               
+                               <span class="form-text text-danger"
+                         *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" 
                               class ="aler alert-danger">
-                        <div [hidden]="!emailref.errors?.pattern">
-                            Email invalido
+                              
+                        <!-- <div [hidden]="!emailref.errors?.pattern"> -->
+                            Email invalido</span> 
+                        <!-- </div>  -->
                         </div> 
-                        </div> 
-                    </div>
-           
+                    
+
 <!--Existencias-->
 
             <div class="mb-3">
+                
                 <label for="Comentarios" 
                        class="form-label">Comentarios</label>
+                <div class="col-sm-9"></div>
+
                 <textarea class="form-control" 
                         required  
                         rows="3">
@@ -72,21 +80,22 @@
         </div>
   
     </form>
+    
 
 <div class="row">
-    <div class="col">
+    <div class="col" >
 
         <span>Valid</span>
         <pre>{{miFormulario.valid}}</pre>
 
        <span>Touched</span>
         <pre>{{miFormulario.touched}}</pre>
-        <!--touched se emplea para saber si el usuario ha tocado el formulario-->
+       <!-- touched se emplea para saber si el usuario ha tocado el formulario-->
 
-        <span>Value</span>
+         <span>Value</span>
         <pre>{{miFormulario.value | json}}</pre>
 
         <span>Comentarios</span>
         <pre>{{miFormulario.touched| json}}</pre>
     </div>
-</div>
+</div> 

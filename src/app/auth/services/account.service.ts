@@ -11,7 +11,7 @@ export class AccountService {
   //para traer esa información
 
   getUsuariosRedesSociales() {
-    return this.http.get("http://localhost:3000/grafica")
+    return this.http.get("http://localhost:4000/grafica")
     //Y aqui le decimos que nos retorne una petición http con los datos
     //de esta ruta. Así tenemos ya los servicios implementados. Sólo queda llamar
     //a este método en el dona http
